@@ -23,6 +23,17 @@ pub fn fn_count( base string, target string ) int {
 
 //------------------------
 // :[ NAME ]:
+//     fn_copy
+//
+// :[ CATEGORY ]:
+//     Skill
+//------------------------
+pub fn fn_copy( base string ) string {
+     return base
+}
+
+//------------------------
+// :[ NAME ]:
 //     fn_upper_all
 //
 // :[ CATEGORY ]:
