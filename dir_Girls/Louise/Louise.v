@@ -9,16 +9,7 @@ module louise
 //     Skill
 //------------------------
 pub fn fn_count( base string, target string ) int {
-     mut count := 0
-
-     loop_count := base.len - target.len
-     for i := 0 ; i < loop_count ; i++ {
-          if base[i..( i + target.len )] == target {
-               count++
-          }
-     }
-
-     return count
+     return base.count( target )
 }
 
 //------------------------
