@@ -34,6 +34,17 @@ pub fn fn_copy( base string ) string {
 
 //------------------------
 // :[ NAME ]:
+//     fn_replace
+//
+// :[ CATEGORY ]:
+//     Skill
+//------------------------
+pub fn fn_replace( base string, target string, replacement string ) string {
+     return base.replace_once( target, replacement )
+}
+
+//------------------------
+// :[ NAME ]:
 //     fn_upper_all
 //
 // :[ CATEGORY ]:
