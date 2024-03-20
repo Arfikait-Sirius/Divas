@@ -36,6 +36,17 @@ pub fn fn_replace( base string, target string, replacement string ) string {
 
 //------------------------
 // :[ NAME ]:
+//     fn_split
+//
+// :[ CATEGORY ]:
+//     Skill
+//------------------------
+pub fn fn_split( base string, splitter string, index int ) string {
+     return base.split( splitter )[index]
+}
+
+//------------------------
+// :[ NAME ]:
 //     fn_upper_all
 //
 // :[ CATEGORY ]:
@@ -68,4 +79,23 @@ pub fn fn_upper_first( base string ) string {
      base_upper := base.to_upper()[0..1]
 
      return "$base_upper$base_lower"
+}
+
+//------------------------
+// :[ NAME ]:
+//     fn_get_substring
+//
+// :[ CATEGORY ]:
+//     Skill
+//------------------------
+pub fn fn_get_substring( base string, format string ) string {
+     i := format.index_after( "%s", 0 )
+
+     s := format[0..i]
+     e := format[( i + 2 )..format.len]
+
+     s_index := base.index_after( s, 0 ) + i
+     e_index := base.index_after( e, 0 )
+
+     return base.substr( s_index, e_index )
 }
